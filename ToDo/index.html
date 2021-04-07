@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+            integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+            crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>todo list</title>
+</head>
+
+<style>
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+main {
+    border-radius: 8px;
+    padding: 5%;
+    box-shadow: 1px 1px #c1c1c1;
+    font-family: 'Raleway', sans-serif;
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    background:white;
+    position: relative;
+}
+
+
+body {
+	background:white;
+}
+
+#back {
+	background:white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+#overlay {
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    background:rgb(64, 187, 64);
+    opacity: 0.5;
+    z-index: 0;
+}
+
+
+.text-center {
+  color:green ;
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+}
+
+.title {
+  font-size: 60px;
+  padding: 0px;
+  margin: 20px;
+}
+
+.tt{
+    color:green ;
+    font-family: 'Staatliches', cursive;
+    font-size: 20px;
+
+}
+  
+</style>
+
+
+<body id="back">
+    <div id="overlay"></div>
+    <main>
+        <section>
+    <div class="container" style ="margin-top:20px;">
+        <div class="container">
+           
+            <h1 class="text-center title">TODO LIST   <i class="fas fa-clipboard-list"></i></h1>
+     
+        </div>
+                                     
+        <div  class="card row tt">
+            <div class="card-header   "></div>
+                <div class="card-body">
+                    <form id = "sozluk-form" name="form">
+                        <div class="form-row">
+                            <div class="form-group col-md-6 ">
+                                <h5 class="card-title" id = "tasks-title">Todo List</h5>
+                              <input class="form-control " type="text" name="sozluk" id = "sozluk" placeholder="Bir Todo Giriniz!"><br>
+                    
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success">Todo Ekleyin</button>
+                    </form>
+                    <hr>
+                
+                </div>
+         
+             <div class="card-body">
+                    <hr>
+                    <h5 class="card-title" id = "tasks-title">ToDo Arama</h5>
+                    <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <input class="form-control" type="text" name="filter" id = "filter" placeholder="Aramak istediğiniz todo!">
+                            </div>
+                    </div>
+
+                    <hr>
+                    <ul class="list-group">
+
+
+                    </ul>
+                    <hr>  
+                    <a id = "clear-todo" class="btn btn-success" href="#">Hepsini Sil!</a>               
+                </div>
+              </div>
+        
+    </div>
+</section>
+<section >
+</section>
+
+</main>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="todo.js"></script>
+
+</body>
+</html>
